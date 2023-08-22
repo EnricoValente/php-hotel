@@ -50,15 +50,46 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>PHP Hotels</title>
+        <!-- BS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     </head>
     <body>
-        <div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Parking</th>
+                <th scope="col">Vote</th>
+                <th scope="col">Distance to center</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+
+            
             <?php
-                foreach ($hotels as $key => $hotel) {
-                    var_dump($key);
-                    var_dump($hotel);
-                }
+                foreach ($hotels as $hotel) {
+                    foreach ($hotel as $singleHotel) {
+
             ?>
-        </div>
+                    
+                        
+                <tr>
+                    <td scope="row"><?php echo $singleHotel;?></td>
+
+                </tr>
+                    
+                
+
+                        
+                    
+            <?php
+                }   
+             }
+            ?>
+           
+        </tbody>
+</table>
     </body>
 </html>
