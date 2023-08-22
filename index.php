@@ -70,22 +70,24 @@
             
             <?php
                 foreach ($hotels as $hotel) {
-                    foreach ($hotel as $singleHotel) {
-
             ?>
-                    
-                        
-                <tr>
-                    <td scope="row"><?php echo $singleHotel;?></td>
+           <tr>
+            <?php
+                foreach ($hotel as $singleHotel) {
+            ?>
+                <td><?php echo $singleHotel;?></td>
 
-                </tr>
                     
                 
 
                         
                     
             <?php
-                }   
+                } 
+                ?>
+                </tr>
+
+                <?php      
              }
             ?>
            
