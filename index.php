@@ -73,9 +73,19 @@
             ?>
            <tr>
             <?php
-                foreach ($hotel as $singleHotel) {
+                foreach ($hotel as $key => $singleHotel) {
             ?>
-                <td><?php echo $singleHotel;?></td>
+                 <td><?php 
+                 if($key !='parking') {
+                    echo $singleHotel;
+                 }
+                 else if($singleHotel == true) {
+                    echo 'yes';
+                 }
+                 else {
+                    echo 'no';
+                 }
+                 ?></td>
 
                     
                 
